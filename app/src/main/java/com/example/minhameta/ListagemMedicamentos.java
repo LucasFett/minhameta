@@ -12,7 +12,7 @@ public class ListagemMedicamentos extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listagem_medicamentos);
+        setContentView(R.layout.activity_listagem_metas);
         List<Medicamento> listaMedicamento = (List<Medicamento>) getIntent().
                 getSerializableExtra("lista");
 

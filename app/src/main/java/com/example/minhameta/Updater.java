@@ -16,7 +16,7 @@ public class Updater extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_updater);
+        setContentView(R.layout.activity_updater_medicamento);
 
         bancoDeDados = new BancoDeDados(this);
     }

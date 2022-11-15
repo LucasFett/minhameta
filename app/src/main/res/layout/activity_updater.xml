@@ -1,60 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Updater">
+    android:background="#F4734A"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="20dp">
 
-        <TextView
-            android:id="@+id/textView"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ID do medicamento"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/id_fruta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Dgite o ID aqui"
-            android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/textViewNomeItemMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Nome"
+                android:textColor="#F4734A"
+                android:textSize="20sp" />
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="97dp"
-            android:background="?android:attr/listDivider" />
+            <EditText
+                android:id="@+id/editTextNomeMeta"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="20dp"
+                android:background="#F4F4F4"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="false" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Novo Preço do Medicamento"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Valor Necessário"
+                android:textColor="#F4734A"
+                android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/novo_preco"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Digite o novo preço aqui"
-            android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/editTextValorMeta"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="20dp"
+                android:background="#F4F4F4"
+                android:ems="10"
+                android:hapticFeedbackEnabled="false"
+                android:inputType="textPassword" />
 
-        <Button
-            android:id="@+id/Atualizar"
-            android:layout_width="match_parent"
-            android:layout_height="86dp"
-            android:onClick="Atualizar"
-            android:text="Atualizar"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Data Limite"
+                android:textColor="#F4734A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextDataMeta"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="20dp"
+                android:background="#F4F4F4"
+                android:ems="10"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Descrição"
+                android:textColor="#F4734A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextDescricaoMeta"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:layout_marginBottom="20dp"
+                android:background="#F4F4F4"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/buttonDeletar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#F4734A"
+                android:text="ATUALIZAR"
+                app:cornerRadius="2dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
