@@ -27,7 +27,7 @@ public class Adapter extends ArrayAdapter<Medicamento> {
         if(view == null){
             Context ctx = getContext();
             LayoutInflater li = (LayoutInflater)ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = li.inflate(R.layout.item_medicamento,null);
+            view = li.inflate(R.layout.item_meta,null);
         }
 
         Medicamento medicamento = listaMedicamento.get(position);
