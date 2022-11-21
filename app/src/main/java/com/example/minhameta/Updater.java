@@ -21,7 +21,7 @@ public class Updater extends AppCompatActivity {
         bancoDeDados = new BancoDeDados(this);
     }
 
-    public void Atualizar(View view) {
+    public void atualizarMeta(View view) {
         EditText nome = findViewById(R.id.editTextNomeMetaUpdate);
         EditText data = findViewById(R.id.editTextDataMetaUpdate);
         EditText descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
@@ -31,12 +31,15 @@ public class Updater extends AppCompatActivity {
         String novoData = data.getText().toString();
         String novoDescricao = descricao.getText().toString();
         Float novoValor = Float.parseFloat(valor.getText().toString());
+        Integer id = null;
 
 
-        bancoDeDados.updateNome(id, novoNome);
-        bancoDeDados.updateData(id, novoData);
-        bancoDeDados.updateDescricao(id, novoDescricao);
-        bancoDeDados.updateValor(id, novoValor);
+        bancoDeDados.updateMeta(id,novoNome,novoData,novoDescricao,novoValor);
+        bancoDeDados.updateValor(id,novoValor);
+        bancoDeDados.updateNome(id,novoNome);
+        bancoDeDados.updateData(id,novoData);
+        bancoDeDados.updateDescricao(id,novoDescricao);
+
 
         Bundle bundle   = new Bundle();
         bundle.putSerializable("lista",(Serializable) bancoDeDados.buscaTodasMetas());

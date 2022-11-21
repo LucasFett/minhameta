@@ -22,37 +22,45 @@ public class Cadastro extends AppCompatActivity {
         bancoDeDados = new BancoDeDados(this);
     }
 
-    public void salvar(View view) {
+    public void Cadastrar(View view) {
         EditText nome = findViewById(R.id.editTextNomeMetaUpdate);
-        EditText valor = findViewById(R.id.editTextValorMetaUpdate);
-        EditText data = findViewById(R.id.editTextDataMetaUpdate);
-        EditText descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
+        EditText ValorNecessario = findViewById(R.id.editTextValorMetaUpdate);
+        EditText DataLimite = findViewById(R.id.editTextDataMetaUpdate);
+        EditText Descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
 
-        if (nome.getText().toString().equals("")) {
-            Toast.makeText(this, "ERROR, Nome está vazio", Toast.LENGTH_LONG).show();
-            return;
-        }
-        if (valor.getText().toString().equals("")) {
+
+       if(nome.getText().toString().equals("")){
+        Toast.makeText(this,"ERROR, Nome está vazio",Toast.LENGTH_LONG).show();
+        return;
+    }
+        if (ValorNecessario.getText().toString().equals("")) {
             Toast.makeText(this, "ERROR, Valor está vazio", Toast.LENGTH_LONG).show();
             return;
         }
-        if (data.getText().toString().equals("")) {
+        if (DataLimite.getText().toString().equals("")) {
             Toast.makeText(this, "ERROR, Data está vazia", Toast.LENGTH_LONG).show();
             return;
         }
-        if (descricao.getText().toString().equals("")) {
+        if (Descricao.getText().toString().equals("")) {
             Toast.makeText(this, "ERROR, Descrição está vazia", Toast.LENGTH_LONG).show();
             return;
         }
+        try{
+            Double.parseDouble(ValorNecessario.getText().toString());
+        }catch(Exception e){
+            Toast.makeText(this,"ERROR, Valor Necessário deve ser numérico.",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
+
 
         Meta meta = new Meta();
         meta.setNome(nome.getText().toString());
-        meta.setData(data.getText().toString());
-        meta.setDescricao(descricao.getText().toString());
+        meta.setData(DataLimite.getText().toString());
+        meta.setDescricao(Descricao.getText().toString());
 
-        Float valorFloat = Float.parseFloat(valor.getText().toString());
+        Float valorFloat = Float.parseFloat(ValorNecessario.getText().toString());
         meta.setValor(valorFloat);
-
         bancoDeDados.salvarMeta(meta);
 
         Bundle bundle = new Bundle();

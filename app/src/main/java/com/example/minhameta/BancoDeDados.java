@@ -35,11 +35,11 @@ public class BancoDeDados extends SQLiteOpenHelper {
         Log.i("meta","Sendo executado onCreate");
 
         String sql = "CREATE TABLE meta (" +
-                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "id INTEGER PRIMARY KEY," +
                 "nome TEXT NOT NULL," +
                 "data TEXT NOT NULL," +
                 "descricao TEXT NOT NULL," +
-                "preco REAL NOT NULL)";
+                "valor REAL NOT NULL)";
 
         sqLiteDatabase.execSQL(sql);
 

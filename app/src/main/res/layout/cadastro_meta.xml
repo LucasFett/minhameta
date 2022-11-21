@@ -123,6 +123,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:backgroundTint="#F4734A"
+                android:onClick="Cadastrar"
                 android:text="CADASTRAR"
                 app:cornerRadius="2dp" />
 
