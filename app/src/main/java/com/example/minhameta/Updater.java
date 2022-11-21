@@ -10,7 +10,7 @@ import android.widget.EditText;
 import java.io.Serializable;
 
 public class Updater extends AppCompatActivity {
-
+//
     BancoDeDados bancoDeDados = null;
 
     @Override

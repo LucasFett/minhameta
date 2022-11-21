@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import java.io.Serializable;
-
+//
 public class Deleter extends AppCompatActivity {
 
     BancoDeDados bancoDeDados = null;

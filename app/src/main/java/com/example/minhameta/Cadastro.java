@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.Serializable;
-
+//
 public class Cadastro extends AppCompatActivity {
 
     BancoDeDados bancoDeDados = null;

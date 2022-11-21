@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+//
     BancoDeDados bancoDeDados = null;
     //public Button listagem, cadastro;
 

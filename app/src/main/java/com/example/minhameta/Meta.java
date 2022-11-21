@@ -3,7 +3,7 @@ package com.example.minhameta;
 import java.io.Serializable;
 
 public class Meta implements Serializable {
-
+//
     private String nome;
     private Float valor;
     private String data;

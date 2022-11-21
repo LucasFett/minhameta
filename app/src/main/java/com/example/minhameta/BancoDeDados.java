@@ -13,10 +13,10 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//
 // para visualizar as tabelas, usar a ferramenta no android studio, chamada
 // AAPP INSPECTION
-
+//
 public class BancoDeDados extends SQLiteOpenHelper {
 
     private static final String NOME_BANCO = "meta";
