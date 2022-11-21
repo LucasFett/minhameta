@@ -35,7 +35,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.minhameta.ListagemMedicamentos"
+            android:name="com.example.minhameta.ListagemMetas"
             android:exported="true" />
         <activity
             android:name="com.example.minhameta.MainActivity"

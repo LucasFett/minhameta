@@ -67,7 +67,7 @@
                     app:cornerRadius="50dp" />
 
                 <Button
-                    android:id="@+id/buttonDeletar"
+                    android:id="@+id/buttonMostrarLista"
                     android:layout_width="50dp"
                     android:layout_height="60dp"
                     android:backgroundTint="#F4734A"

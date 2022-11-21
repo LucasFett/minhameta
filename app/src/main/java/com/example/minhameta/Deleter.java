@@ -16,22 +16,33 @@ public class Deleter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_deleter_medicamento);
+        setContentView(R.layout.activity_deleter);
 
         bancoDeDados = new BancoDeDados(this);
     }
 
     public void deletar(View view) {
-        EditText id = findViewById(R.id.deletar_por_id);
-        Integer idInteiro = Integer.parseInt(id.getText().toString());
+        EditText nome = findViewById(R.id.editTextNomeMetaUpdate);
+        EditText data = findViewById(R.id.editTextDataMetaUpdate);
+        EditText descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
+        EditText valor = findViewById(R.id.editTextValorMetaUpdate);
 
-        bancoDeDados.deletarPorId(idInteiro);
+        String novoNome = nome.getText().toString();
+        String novoData = data.getText().toString();
+        String novoDescricao = descricao.getText().toString();
+        Float novoValor = Float.parseFloat(valor.getText().toString());
+
+
+        bancoDeDados.deletarPorNome(novoNome);
+        bancoDeDados.deletarPorData(novoData);
+        bancoDeDados.deletarPorDescricao(novoDescricao);
+        bancoDeDados.deletarPorValor(novoValor);
 
 
         Bundle bundle = new Bundle();
-        bundle.putSerializable("lista",(Serializable) bancoDeDados.buscaTodosMedicamentos());
+        bundle.putSerializable("lista",(Serializable) bancoDeDados.buscaTodasMetas());
 
-        Intent intent= new Intent(this,ListagemMedicamentos.class);
+        Intent intent= new Intent(this, ListagemMetas.class);
         intent.putExtras(bundle);
         startActivity(intent);
 

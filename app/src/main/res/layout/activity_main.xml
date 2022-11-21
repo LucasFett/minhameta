@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="15dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:layout_weight="1"
@@ -30,70 +30,48 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="220dp"
-        android:layout_weight="1"
+        android:layout_marginBottom="300dp"
         app:cardCornerRadius="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textViewNomeItemMeta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Usuário"
-                android:textColor="#F4734A"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextNomeMeta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="#F4734A"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:selectAllOnFocus="false" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Senha"
-                android:textColor="#F4734A"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextValorMeta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="#F4734A"
-                android:inputType="textPassword" />
-
             <Button
-                android:id="@+id/buttonDeletar"
+                android:id="@+id/buttonMostrarLista"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="#F4734A"
-                android:text="ENTRAR"
+                android:text="MINHAS METAS"
+                app:cornerRadius="2dp" />
+
+            <Button
+                android:id="@+id/buttonCadastrarNovaMeta"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#F4734A"
+                android:text="CADASTRAR NOVA META"
                 app:cornerRadius="2dp" />
 
             <TextView
-                android:id="@+id/textViewCadastro"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Ainda não possui cadastro?"
-                android:textSize="18sp" />
+                android:layout_marginTop="50dp"
+                android:gravity="bottom"
+                android:text="Autores: Wesley Petitemberte, Lucas Palma"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="versão 1.0.0" />
 
         </LinearLayout>
 

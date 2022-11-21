@@ -50,7 +50,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextNomeMeta"
+                android:id="@+id/editTextNomeMetaUpdate"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginBottom="20dp"
@@ -70,7 +70,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextValorMeta"
+                android:id="@+id/editTextValorMetaUpdate"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginBottom="20dp"
@@ -90,7 +90,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextDataMeta"
+                android:id="@+id/editTextDataMetaUpdate"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginBottom="20dp"
@@ -109,7 +109,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextDescricaoMeta"
+                android:id="@+id/editTextDescricaoMetaUpdate"
                 android:layout_width="match_parent"
                 android:layout_height="138dp"
                 android:layout_marginBottom="20dp"
@@ -119,7 +119,7 @@
                 android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/buttonDeletar"
+                android:id="@+id/buttonMostrarLista"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:backgroundTint="#F4734A"

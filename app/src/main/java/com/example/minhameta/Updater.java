@@ -16,24 +16,32 @@ public class Updater extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_updater_medicamento);
+        setContentView(R.layout.activity_updater);
 
         bancoDeDados = new BancoDeDados(this);
     }
 
     public void Atualizar(View view) {
-        EditText id = findViewById(R.id.id_fruta);
-        EditText novoPreco = findViewById(R.id.novo_preco);
+        EditText nome = findViewById(R.id.editTextNomeMetaUpdate);
+        EditText data = findViewById(R.id.editTextDataMetaUpdate);
+        EditText descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
+        EditText valor = findViewById(R.id.editTextValorMetaUpdate);
 
-        Integer idInteiro = Integer.parseInt(id.getText().toString());
-        Float precoFrutaFloat = Float.parseFloat(novoPreco.getText().toString());
+        String novoNome = nome.getText().toString();
+        String novoData = data.getText().toString();
+        String novoDescricao = descricao.getText().toString();
+        Float novoValor = Float.parseFloat(valor.getText().toString());
 
-        bancoDeDados.updatePreco(idInteiro,precoFrutaFloat);
+
+        bancoDeDados.updateNome(id, novoNome);
+        bancoDeDados.updateData(id, novoData);
+        bancoDeDados.updateDescricao(id, novoDescricao);
+        bancoDeDados.updateValor(id, novoValor);
 
         Bundle bundle   = new Bundle();
-        bundle.putSerializable("lista",(Serializable) bancoDeDados.buscaTodosMedicamentos());
+        bundle.putSerializable("lista",(Serializable) bancoDeDados.buscaTodasMetas());
 
-        Intent intent= new Intent(this,ListagemMedicamentos.class);
+        Intent intent= new Intent(this, ListagemMetas.class);
         intent.putExtras(bundle);
         startActivity(intent);
     }
