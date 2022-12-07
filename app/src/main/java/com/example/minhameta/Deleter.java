@@ -42,7 +42,7 @@ public class Deleter extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putSerializable("lista",(Serializable) bancoDeDados.buscaTodasMetas());
 
-        Intent intent= new Intent(this, ListagemMetas.class);
+        Intent intent= new Intent(this, Lista.class);
         intent.putExtras(bundle);
         startActivity(intent);
 

@@ -58,7 +58,6 @@ public class Cadastro extends AppCompatActivity {
         meta.setNome(nome.getText().toString());
         meta.setData(DataLimite.getText().toString());
         meta.setDescricao(Descricao.getText().toString());
-
         Float valorFloat = Float.parseFloat(ValorNecessario.getText().toString());
         meta.setValor(valorFloat);
         bancoDeDados.salvarMeta(meta);
@@ -66,7 +65,7 @@ public class Cadastro extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putSerializable("lista", (Serializable) bancoDeDados.buscaTodasMetas());
 
-        Intent intent = new Intent(this, ListagemMetas.class);
+        Intent intent = new Intent(this, Lista.class);
         intent.putExtras(bundle);
         startActivity(intent);
 

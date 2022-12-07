@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.Serializable;
+
 public class MainActivity extends AppCompatActivity {
 //
     BancoDeDados bancoDeDados = null;
@@ -23,25 +25,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-//    public void abreTelaAtualizacao(View view) {
-//
-//        Intent intent = new Intent(this,Updater.class);
-//        startActivity(intent);
-//    }
-//
-//    public void abrir_delete(View view) {
-//
-//        Intent intent = new Intent(this,Deleter.class);
-//        startActivity(intent);
-//    }
 
+    public void abrir_listView(View view) {
 
-    public void abrir_listView(View view) {Intent intent = new Intent(this,ListagemMetas.class);
-        startActivity(intent);    }
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("lista", (Serializable) bancoDeDados.buscaTodasMetas());
+
+        Intent intent = new Intent(this, Lista.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
 
     public void abrir_cadastro_activity(View view) {
         Intent intent = new Intent(this,Cadastro.class);
         startActivity(intent);
     }
 
+    public void ir_tela_delete(View view) {
+        Intent intent = new Intent(this,Deleter.class);
+        startActivity(intent);
+    }
+
+    public void ir_tela_update(View view) {
+        Intent intent = new Intent(this,Updater.class);
+        startActivity(intent);
+    }
 }

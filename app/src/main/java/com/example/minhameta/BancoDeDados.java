@@ -85,23 +85,40 @@ public class BancoDeDados extends SQLiteOpenHelper {
 
     public List<Meta> buscaTodasMetas(){
         List<Meta> listaMeta = new ArrayList<>();
-        String sql = "select nome,data,descricao,valor from meta";
+        String sql = "select id,nome,data,descricao,valor from meta";
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery(sql,null);
         cursor.moveToFirst();
         for(int i=0; i < cursor.getCount(); i++){
             Meta meta = new Meta();
-            meta.setNome(cursor.getString(0));
-            meta.setData(cursor.getString(1));
-            meta.setValor(cursor.getFloat(2));
+            meta.setId(cursor.getInt(0));
+            meta.setNome(cursor.getString(1));
+            meta.setData(cursor.getString(2));
             meta.setDescricao(cursor.getString(3));
+            meta.setValor(cursor.getFloat(4));
             listaMeta.add(meta);
             cursor.moveToNext();
         }
         cursor.close();
         return listaMeta;
-    }
 
+
+
+    }
+    public List<Meta> ListarTodasMetas() {
+        List<Meta> listaMeta = new ArrayList<>();
+        String sql = "select * from meta";
+        SQLiteDatabase db = getReadableDatabase();
+        for (int i = 0; i < listaMeta.size(); i++) {
+            Meta meta = new Meta();
+            meta.getNome();
+            meta.getData();
+            meta.getDescricao();
+            meta.getValor();
+        }
+        Log.i("aula","listar");
+        return listaMeta;
+    }
     public List<Meta> buscaPorNome(String nome){
         List<Meta> listaMeta = new ArrayList<>();
         String sql = "select nome from meta where nome == " + nome;
@@ -223,7 +240,7 @@ public class BancoDeDados extends SQLiteOpenHelper {
     }
 
 
-    public void updateMeta(Integer id, String novoNome, String novoData,String novoDescricao, Float novoValor){
+    public void updateMeta(Integer idInteiro, String novoNome, String novoData,String novoDescricao, Float novoValor){
         StringBuilder sql = new StringBuilder();
         sql.append("update meta set ");
         if(novoNome != null && novoData != null && novoDescricao != null && novoValor != null){
@@ -232,7 +249,7 @@ public class BancoDeDados extends SQLiteOpenHelper {
             sql.append(" descricao = ").append(novoDescricao).append(",");
             sql.append(" valor = ").append(novoValor);
         }
-        sql.append(" where id = ").append(id);
+        sql.append(" where id = ").append(idInteiro);
         Log.i("meta","SQL updateMeta: " + sql.toString());
         getWritableDatabase().execSQL(sql.toString());
     }

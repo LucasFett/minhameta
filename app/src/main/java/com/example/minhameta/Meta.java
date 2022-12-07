@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Meta implements Serializable {
 //
+    private Integer id;
     private String nome;
     private Float valor;
     private String data;
@@ -40,4 +41,13 @@ public class Meta implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
 }

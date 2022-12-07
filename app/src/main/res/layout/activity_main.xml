@@ -40,7 +40,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/buttonMostrarLista"
+                android:id="@+id/atualizarMeta"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="10dp"
@@ -58,6 +58,23 @@
                 android:onClick="abrir_cadastro_activity"
                 android:text="CADASTRAR NOVA META"
                 app:cornerRadius="2dp" />
+
+            <Button
+                android:id="@+id/tela_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#F4734A"
+                android:onClick="ir_tela_update"
+                android:text="Atualizar Meta" />
+
+            <Button
+                android:id="@+id/tela_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#F4734A"
+                android:onClick="ir_tela_delete"
+                android:text="Deletar meta" />
 
             <TextView
                 android:id="@+id/textView2"
