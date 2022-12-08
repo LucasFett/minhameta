@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_weight="1"
         android:fontFamily="cursive"
         android:text="Qual a sua Meta?"
@@ -29,7 +29,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:layout_weight="1"
         app:cardCornerRadius="20dp">
 

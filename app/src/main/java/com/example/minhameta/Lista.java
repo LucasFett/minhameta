@@ -36,7 +36,7 @@ public class Lista extends AppCompatActivity {
             mensagem.append("Valor necessário: R$ ");
             mensagem.append(meta.getValor());
             mensagem.append("\n");
-            mensagem.append("----------------------------------------------------------");
+            mensagem.append("-----------------------------------------------");
             mensagem.append("\n");
 
         }

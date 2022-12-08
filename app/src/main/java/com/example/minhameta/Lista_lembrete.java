@@ -29,7 +29,7 @@ public class Lista_lembrete extends AppCompatActivity {
             mensagem.append("Lembrete: ");
             mensagem.append(lembrete.getTextoLembrete());
             mensagem.append("\n");
-            mensagem.append("------------------------------------------------------");
+            mensagem.append("-----------------------------------------------");
         }
         textView.setText(mensagem.toString());
 
