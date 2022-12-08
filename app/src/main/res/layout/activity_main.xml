@@ -9,23 +9,9 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_weight="1"
-        android:fontFamily="cursive"
-        android:text="Minha Meta"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="60sp"
-        android:textStyle="bold" />
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="636dp"
         android:layout_gravity="center|center_vertical"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
@@ -39,8 +25,20 @@
             android:layout_margin="20dp"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4734A"
+                android:fontFamily="cursive"
+                android:text="Minha Meta"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
             <Button
-                android:id="@+id/atualizarMeta"
+                android:id="@+id/resgistrarLembrete"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="10dp"
@@ -52,7 +50,7 @@
             <Button
                 android:id="@+id/buttonCadastrarNovaMeta"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="#F4734A"
                 android:onClick="abrir_cadastro_activity"
@@ -62,11 +60,11 @@
             <Button
                 android:id="@+id/tela_update"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
                 android:backgroundTint="#F4734A"
                 android:onClick="ir_tela_update"
-                android:text="Atualizar Meta" />
+                android:text="Atualizar Valor de uma meta" />
 
             <Button
                 android:id="@+id/tela_delete"
@@ -76,6 +74,30 @@
                 android:onClick="ir_tela_delete"
                 android:text="Deletar meta" />
 
+            <Button
+                android:id="@+id/IrLembrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#5A4E4E"
+                android:onClick="irLembrete"
+                android:text="Criar um Lembrete" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#5A4E4E"
+                android:onClick="listar_lembretes"
+                android:text="MEUS LEMBRETES" />
+
+            <Button
+                android:id="@+id/ir_deletar_lembrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#5A4E4E"
+                android:onClick="ir_tela_delete_lembrete"
+                android:text="deletar um lembrete" />
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
@@ -83,14 +105,15 @@
                 android:layout_marginTop="50dp"
                 android:gravity="bottom"
                 android:text="Autores: Wesley Petitemberte, Lucas Palma"
-                android:textAlignment="textEnd" />
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="versão 1.0.0" />
+                android:text="versão 1.0.0"
+                android:textAlignment="center" />
 
         </LinearLayout>
 

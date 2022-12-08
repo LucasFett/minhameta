@@ -23,22 +23,23 @@ public class Updater extends AppCompatActivity {
 
     public void atualizarMeta(View view) {
         EditText id = findViewById(R.id.Seleciona_id);
-        EditText nome = findViewById(R.id.editTextNomeMetaUpdate);
-        EditText data = findViewById(R.id.editTextDataMetaUpdate);
-        EditText descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
+//        EditText nome = findViewById(R.id.editTextNomeMetaUpdate);
+//        EditText data = findViewById(R.id.editTextDataMetaUpdate);
+//        EditText descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
         EditText valor = findViewById(R.id.editTextValorMetaUpdate);
 
-        String novoNome = nome.getText().toString();
-        String novoData = data.getText().toString();
-        String novoDescricao = descricao.getText().toString();
+        Integer novoid= Integer.parseInt(id.getText().toString());;
+//        String novoNome = (nome.getText().toString());
+//        String novoData = String.valueOf(data);
+//        String novoDescricao = String.valueOf(descricao);
         Float novoValor = Float.parseFloat(valor.getText().toString());
-        Integer idInteiro = Integer.parseInt(id.getText().toString());;
 
 
-        bancoDeDados.updateMeta(idInteiro,novoNome,novoData,novoDescricao,novoValor);
-//        bancoDeDados.updateData(idInteiro,novoData);
-//        bancoDeDados.updateDescricao(idInteiro,novoDescricao);
-//        bancoDeDados.updateValor(idInteiro,novoValor);
+        //bancoDeDados.updateMeta(idInteiro,novoNome,novoData,novoDescricao,novoValor);
+//        bancoDeDados.updateNome(novoid,novoNome);
+//        bancoDeDados.updateData(novoid,novoData);
+//        bancoDeDados.updateDescricao(novoid,novoDescricao);
+        bancoDeDados.updateValor(novoid,novoValor);
 
 
         Bundle bundle   = new Bundle();

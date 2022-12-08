@@ -22,21 +22,22 @@ public class Deleter extends AppCompatActivity {
     }
 
     public void deletar(View view) {
-        EditText nome = findViewById(R.id.editTextNomeMetaUpdate);
-        EditText data = findViewById(R.id.editTextDataMetaUpdate);
-        EditText descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
-        EditText valor = findViewById(R.id.editTextValorMetaUpdate);
+        EditText id= findViewById(R.id.IdDeleteMeta);
+//        EditText data = findViewById(R.id.editTextDataMetaUpdate);
+//        EditText descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
+//        EditText valor = findViewById(R.id.editTextValorMetaUpdate);
 
-        String novoNome = nome.getText().toString();
-        String novoData = data.getText().toString();
-        String novoDescricao = descricao.getText().toString();
-        Float novoValor = Float.parseFloat(valor.getText().toString());
+//        String novoNome = nome.getText().toString();
+//        String novoData = data.getText().toString();
+//        String novoDescricao = descricao.getText().toString();
+//        Float novoValor = Float.parseFloat(valor.getText().toString());
 
 
-        bancoDeDados.deletarPorNome(novoNome);
-        bancoDeDados.deletarPorData(novoData);
-        bancoDeDados.deletarPorDescricao(novoDescricao);
-        bancoDeDados.deletarPorValor(novoValor);
+        Integer idSelecionado= Integer.parseInt(id.getText().toString());;
+
+
+
+        bancoDeDados.deletarMetaPorId(idSelecionado);
 
 
         Bundle bundle = new Bundle();

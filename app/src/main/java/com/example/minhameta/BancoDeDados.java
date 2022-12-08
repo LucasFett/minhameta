@@ -2,14 +2,10 @@ package com.example.minhameta;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -236,6 +232,12 @@ public class BancoDeDados extends SQLiteOpenHelper {
         String sql = "update meta set valor = " + novoValor +" where " +
                 " id = " + id ;
         Log.i("meta","SQL updateValor: " + sql);
+        getWritableDatabase().execSQL(sql);
+    }
+
+    public void deletarMetaPorId(Integer id){
+        String sql = "delete from meta where id = " + id;
+        Log.i("meta","SQL deletarMetaPorId: " + sql);
         getWritableDatabase().execSQL(sql);
     }
 

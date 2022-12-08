@@ -12,6 +12,8 @@ import java.io.Serializable;
 public class MainActivity extends AppCompatActivity {
 //
     BancoDeDados bancoDeDados = null;
+    Banco_lembrete banco_lembrete = null;
+
     //public Button listagem, cadastro;
 
     @Override
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bancoDeDados = new BancoDeDados(this);
+        banco_lembrete = new Banco_lembrete(this);
         //Button listagem = findViewById(R.id.buttonMostrarLista);
         //Button cadastro = findViewById(R.id.buttonCadastrarNovaMeta);
     }
@@ -48,6 +51,27 @@ public class MainActivity extends AppCompatActivity {
 
     public void ir_tela_update(View view) {
         Intent intent = new Intent(this,Updater.class);
+        startActivity(intent);
+    }
+
+    public void irLembrete(View view) {
+        Intent intent = new Intent(this,Cadastro_lembrete.class);
+        startActivity(intent);
+
+    }
+
+    public void ir_tela_delete_lembrete(View view) {
+        Intent intent = new Intent(this,deletar_lembrete.class);
+        startActivity(intent);
+    }
+
+    public void listar_lembretes(View view) {
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("lista", (Serializable) banco_lembrete.buscaLembretes());
+
+        Intent intent = new Intent(this, Lista_lembrete.class);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }

@@ -26,7 +26,7 @@ public class Cadastro extends AppCompatActivity {
         EditText nome = findViewById(R.id.editTextNomeMetaUpdate);
         EditText ValorNecessario = findViewById(R.id.editTextValorMetaUpdate);
         EditText DataLimite = findViewById(R.id.editTextDataMetaUpdate);
-        EditText Descricao = findViewById(R.id.editTextDescricaoMetaUpdate);
+        EditText Descricao = findViewById(R.id.EscreverLembrete);
 
 
        if(nome.getText().toString().equals("")){

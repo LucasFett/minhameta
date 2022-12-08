@@ -42,31 +42,12 @@
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textViewNomeItemMeta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Novo nome"
-                android:textColor="#F4734A"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextNomeMetaUpdate"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginBottom="20dp"
-                android:background="#F4F4F4"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Novo valor necessário"
+                android:text="Valor atualizado"
                 android:textColor="#F4734A"
                 android:textSize="20sp" />
 
@@ -80,47 +61,8 @@
                 android:hapticFeedbackEnabled="false"
                 android:inputType="number" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Nova data limite"
-                android:textColor="#F4734A"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextDataMetaUpdate"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginBottom="20dp"
-                android:background="#F4F4F4"
-                android:ems="10"
-                android:inputType="date" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Nova descrição"
-                android:textColor="#F4734A"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextDescricaoMetaUpdate"
-                android:layout_width="match_parent"
-                android:layout_height="138dp"
-                android:layout_marginBottom="20dp"
-                android:background="#F4F4F4"
-                android:ems="10"
-                android:fontFamily="sans-serif"
-                android:inputType="textPersonName" />
-
             <Button
-                android:id="@+id/atualizarMeta"
+                android:id="@+id/resgistrarLembrete"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:backgroundTint="#F4734A"
