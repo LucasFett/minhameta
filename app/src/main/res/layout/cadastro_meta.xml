@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:fontFamily="cursive"
         android:text="Qual a sua Meta?"
@@ -24,12 +24,12 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="490dp"
         android:layout_gravity="center|center_vertical"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="50dp"
         android:layout_weight="1"
         app:cardCornerRadius="20dp">
 
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Valor"
+                android:text="Valor Necessário"
                 android:textColor="#F4734A"
                 android:textSize="20sp" />
 
@@ -121,10 +121,10 @@
             <Button
                 android:id="@+id/resgistrarLembrete"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:backgroundTint="#F4734A"
                 android:onClick="Cadastrar"
-                android:text="CADASTRAR META"
+                android:text="CADASTRAR"
                 app:cornerRadius="2dp" />
 
         </LinearLayout>
