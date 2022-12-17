@@ -9,52 +9,52 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#5A4E4E"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
-        <TextView
-            android:id="@+id/textView10"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="81dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="15dp"
-            android:fontFamily="cursive"
-            android:text="Meus Lembretes"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="60sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="18dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            app:cardCornerRadius="20dp">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="81dp"
+                    android:background="#5A4E4E"
+                    android:fontFamily="cursive"
+                    android:text="Meus Lembretes"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="60sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="18dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:background="?android:attr/listDivider" />
 
                 <TextView
                     android:id="@+id/listaLembretes"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#5A4E4E"
                     android:fontFamily="sans-serif"
                     android:textAlignment="viewStart"
-                    android:textColor="#000000"
+                    android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     android:textStyle="italic" />
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </ScrollView>
 
     </LinearLayout>
 
